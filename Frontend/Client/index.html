@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching Data Practice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Data Management System</h1>
+    </header>
+    <main>
+        <section id="controls">
+            <button id="fetch-all">Fetch All Data</button>
+            <input type="number" id="fetch-id" placeholder="Enter ID" />
+            <button id="fetch-by-id">Search by ID</button>
+            <input type="text" id="search-name" placeholder="Enter Name" />
+            <button id="fetch-by-name">Search by Name</button>
+        </section>
+
+        <section id="data-table">
+            <h2>Fetched Data</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Profession</th>
+                        <th>Married</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Dynamic Data -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="forms">
+            <h2>Add or Update Data</h2>
+            <form id="data-form">
+                <label for="record-id">Record ID (for update only):</label>
+                <input type="number" id="record-id" placeholder="Enter ID (optional)" /><br>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter name" required /><br>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Enter age" required /><br>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" required>
+                    <option value="">Select gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select><br>
+
+                <label for="pro">Profession:</label>
+                <input type="text" id="pro" placeholder="Enter profession" required /><br>
+
+                <label for="is-married">Is Married:</label>
+                <select id="is-married" required>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter email" required /><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
